@@ -1,0 +1,9 @@
+// Tailwindcss
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+// Common
+@import 'mixins';
+@import 'animation';
+@import 'basics';

@@ -1,0 +1,7 @@
+*.log
+public/*
+build/*
+!build/manifest.json
+/assets
+/node_modules
+/public
