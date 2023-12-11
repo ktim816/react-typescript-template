@@ -35,7 +35,7 @@ module.exports = {
               `
             @import 'styles/animation';
             @import 'styles/mixins';
-            ` + content
+            ${  content}`
           }
 
           return content
