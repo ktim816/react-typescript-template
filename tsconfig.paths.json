@@ -20,6 +20,9 @@
       "@constants": ["constants"],
       "@constants/*": ["constants/*"],
 
+      "@store": ["store"],
+      "@store/*": ["store/*"],
+
       "@styles": ["styles"],
       "@styles/*": ["styles/*"],
 

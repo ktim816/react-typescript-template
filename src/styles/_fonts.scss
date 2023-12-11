@@ -1,0 +1,6 @@
+@import 'mixins';
+
+$fonts-path: '../assets/fonts';
+$font-primary: 'SBSansDisplay';
+
+// @include font-face($font-primary, '#{$fonts-path}/SBSansDisplay-Regular', 400);

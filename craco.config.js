@@ -13,6 +13,7 @@ module.exports = {
       '@icons': path.resolve(__dirname, 'src/assets/icons'),
       '@images': path.resolve(__dirname, 'src/assets/images'),
       '@helpers': path.resolve(__dirname, 'src/helpers'),
+      '@store': path.resolve(__dirname, 'src/store'),
       '@styles': path.resolve(__dirname, 'src/styles'),
     },
   },
@@ -31,11 +32,10 @@ module.exports = {
           const relativePath = path.relative(rootContext, resourcePath)
 
           if (relativePath.endsWith('.module.scss')) {
-            content =
-              `
-            @import 'styles/animation';
+            content = `
+            @import 'styles/variables';
             @import 'styles/mixins';
-            ${  content}`
+            ${content}`
           }
 
           return content

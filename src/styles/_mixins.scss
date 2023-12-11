@@ -1,4 +1,4 @@
-@mixin theme($theme) {
+@mixin app-theme($theme) {
   :root[data-app-theme='#{$theme}'] & {
     @content;
   }

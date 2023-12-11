@@ -1,3 +1,4 @@
+// https://chir.ag/projects/name-that-color
 module.exports = {
   transparent: 'transparent',
   current: 'currentColor',

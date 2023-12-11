@@ -1,15 +1,23 @@
 const { fontFamily } = require('tailwindcss/defaultTheme')
-const colorStyles = require('./color-styles')
-const { pxToRem } = require('./helpers')
+const colorStyles = require('./utils/color-styles')
+const fontSizes = require('./utils/font-sizes')
 
+/** @type {import('tailwindcss').Config} */
 module.exports = {
-  purge: ['./src/**/*.{js,jsx,ts,tsx}', './public/index.html'],
-  darkMode: false, // or 'media' or 'class'
+  content: ['./src/**/*.{js,jsx,ts,tsx}', './public/index.html'],
   theme: {
     colors: colorStyles,
+    fontSize: {
+      ...fontSizes.mobile,
+      ...fontSizes.tablet,
+      ...fontSizes.desktop,
+    },
     extend: {
+      screens: {
+        xs: 480,
+      },
       fontFamily: {
-        sans: [...fontFamily.sans],
+        primary: [...fontFamily.sans],
       },
     },
   },
