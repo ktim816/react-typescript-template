@@ -1,6 +1,33 @@
+@mixin html-has-class($class) {
+  :root[class='#{$class}'] & {
+    @content;
+  }
+}
+
 @mixin app-theme($theme) {
   :root[data-app-theme='#{$theme}'] & {
     @content;
+  }
+}
+
+@mixin font-face($font-family, $file-path, $weight: normal, $style: normal) {
+  @font-face {
+    font-family: $font-family;
+    font-style: $style;
+    font-weight: $weight;
+    font-display: swap;
+    src:
+      url('#{$file-path}.woff2') format('woff2'),
+      url('#{$file-path}.woff') format('woff');
+  }
+}
+
+@mixin supports-text-gradient {
+  @supports (-webkit-background-clip: text) and
+    (-webkit-text-fill-color: transparent) {
+    @content;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
 }
 
@@ -26,7 +53,7 @@
 }
 
 @mixin fill-img {
-  @apply absolute inset-0 w-full h-full m-auto object-cover;
+  @apply absolute inset-0 size-full m-auto object-cover;
 }
 
 @mixin scrollbar-thin() {
@@ -49,6 +76,7 @@
   & {
     // scrollbar-face-color: theme('colors.on-surface.faint-primary');
     // scrollbar-track-color: theme('colors.on-surface.tertiary');
+    // scrollbar-color: theme('colors.jade') transparent;
   }
 }
 

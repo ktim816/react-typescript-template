@@ -1,32 +1,32 @@
-const { pxToRem, addPrefixObj } = require('../helpers')
+const { pxToRem } = require('./helpers')
 
-module.exports = addPrefixObj({
+module.exports = {
   '2xs': [
+    pxToRem(8),
+    {
+      fontWeight: 400,
+      lineHeight: pxToRem(10),
+    },
+  ],
+  xs: [
     pxToRem(12),
     {
       fontWeight: 400,
       lineHeight: pxToRem(16),
     },
   ],
-  xs: [
-    pxToRem(14),
-    {
-      fontWeight: 400,
-      lineHeight: pxToRem(18),
-    },
-  ],
   sm: [
-    pxToRem(18),
+    pxToRem(16),
     {
       fontWeight: 400,
       lineHeight: pxToRem(21),
     },
   ],
   base: [
-    pxToRem(18),
+    pxToRem(16),
     {
       fontWeight: 400,
-      lineHeight: pxToRem(18),
+      lineHeight: pxToRem(16),
     },
   ],
   md: [
@@ -44,17 +44,17 @@ module.exports = addPrefixObj({
     },
   ],
   xl: [
-    pxToRem(32),
+    pxToRem(27),
     {
       fontWeight: 500,
-      lineHeight: pxToRem(38),
+      lineHeight: pxToRem(27),
     },
   ],
   '2xl': [
-    pxToRem(40),
+    pxToRem(32),
     {
-      fontWeight: 500,
-      lineHeight: pxToRem(40),
+      fontWeight: 400,
+      lineHeight: pxToRem(28),
     },
   ],
-})('tablet')
+}

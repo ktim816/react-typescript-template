@@ -1,4 +1,4 @@
-const { fontFamily } = require('tailwindcss/defaultTheme')
+const { fontFamily, screens } = require('tailwindcss/defaultTheme')
 const colorStyles = require('./utils/color-styles')
 const fontSizes = require('./utils/font-sizes')
 
@@ -8,14 +8,13 @@ module.exports = {
   theme: {
     colors: colorStyles,
     fontSize: {
-      ...fontSizes.mobile,
-      ...fontSizes.tablet,
-      ...fontSizes.desktop,
+      ...fontSizes,
+    },
+    screens: {
+      xs: '480px',
+      ...screens,
     },
     extend: {
-      screens: {
-        xs: 480,
-      },
       fontFamily: {
         primary: [...fontFamily.sans],
       },
